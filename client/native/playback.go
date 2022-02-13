@@ -3,7 +3,7 @@ package native
 import (
 	"errors"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 )
 
 // Playback provides the ARI Playback accessors for the native client

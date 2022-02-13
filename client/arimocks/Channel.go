@@ -3,7 +3,7 @@
 package arimocks
 
 import (
-	ari "github.com/devhossamali/ari/v5"
+	ari "github.com/devhossamali/ari"
 	mock "github.com/stretchr/testify/mock"
 
 	time "time"

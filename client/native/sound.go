@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/url"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 )
 
 // Sound provides the ARI Sound accessors for the native client

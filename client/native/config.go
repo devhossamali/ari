@@ -1,7 +1,7 @@
 package native
 
 import (
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 	"github.com/rotisserie/eris"
 )
 

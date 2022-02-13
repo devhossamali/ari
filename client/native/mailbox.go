@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 )
 
 // Mailbox provides the ARI Mailbox accessors for the native client

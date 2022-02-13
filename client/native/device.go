@@ -3,7 +3,7 @@ package native
 import (
 	"errors"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 )
 
 // DeviceState provides the ARI DeviceState accessors for the native client

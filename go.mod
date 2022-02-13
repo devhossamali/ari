@@ -1,4 +1,4 @@
-module github.com/devhossamali/ari/v5
+module github.com/devhossamali/ari
 
 require (
 	github.com/go-stack/stack v1.8.0 // indirect

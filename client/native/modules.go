@@ -3,7 +3,7 @@ package native
 import (
 	"errors"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 )
 
 // Modules provides the ARI modules accessors for a native client

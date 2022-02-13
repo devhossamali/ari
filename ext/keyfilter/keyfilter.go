@@ -1,6 +1,6 @@
 package keyfilter
 
-import "github.com/devhossamali/ari/v5"
+import "github.com/devhossamali/ari"
 
 // Kind filters a list of keys by a particular Kind
 func Kind(kind string, in []*ari.Key) (out []*ari.Key) {

@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/devhossamali/ari/v5"
-	"github.com/devhossamali/ari/v5/rid"
+	"github.com/devhossamali/ari"
+	"github.com/devhossamali/ari/rid"
 )
 
 // Bridge provides the ARI Bridge accessors for the native client

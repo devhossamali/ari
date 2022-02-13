@@ -1,6 +1,6 @@
 package testutils
 
-import "github.com/devhossamali/ari/v5"
+import "github.com/devhossamali/ari"
 
 // A PlayerPair is the pair of results returned from a mock Play request
 type PlayerPair struct {

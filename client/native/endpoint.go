@@ -3,7 +3,7 @@ package native
 import (
 	"errors"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 )
 
 // Endpoint provides the ARI Endpoint accessors for the native client

@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/devhossamali/ari/v5"
+	"github.com/devhossamali/ari"
 )
 
 // Session describes a structured Play session.
