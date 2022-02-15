@@ -53,7 +53,7 @@ func (sr *StoredRecording) File(key *ari.Key) (*ari.StoredRecordingFile, error) 
 
 	return &ari.StoredRecordingFile{
 		Key:  sr.client.stamp(key),
-		File: buff,
+		File: buff.Bytes(),
 	}, nil
 }
 
