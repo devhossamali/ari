@@ -39,7 +39,7 @@ const (
 	// StoredRecordingKey is the key kind for the ARI StoredRecording resource
 	StoredRecordingKey = "storedrecording"
 
-	// StoredRecordingFileKey is the key kind for the ARI StoredRecordingfile resource
+	// StoredRecordingFileKey is the key kind for the ARI StoredRecordingFile resource
 	StoredRecordingFileKey = "storedrecordingfile"
 
 	// VariableKey is the key kind for the ARI Asterisk Variable resource
