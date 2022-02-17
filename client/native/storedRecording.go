@@ -1,9 +1,8 @@
 package native
 
 import (
-	"bytes"
 	"errors"
-	"net/url"
+	"fmt"
 
 	"github.com/devhossamali/ari"
 )
@@ -40,23 +39,6 @@ func (sr *StoredRecording) Get(key *ari.Key) *ari.StoredRecordingHandle {
 	return ari.NewStoredRecordingHandle(key, sr, nil)
 }
 
-// File gets the file associated with the stored recording
-func (sr *StoredRecording) File(key *ari.Key) (*ari.StoredRecordingFile, error) {
-	if key == nil || key.ID == "" {
-		return nil, errors.New("storedRecording key not supplied")
-	}
-
-	buff := new(bytes.Buffer)
-	if err := sr.client.get("/recordings/stored/"+url.QueryEscape(key.ID)+"/file", buff); err != nil {
-		return nil, dataGetError(err, "storedRecording", "$v", key.ID)
-	}
-
-	return &ari.StoredRecordingFile{
-		Key:  sr.client.stamp(key),
-		File: buff.Bytes(),
-	}, nil
-}
-
 // Data retrieves the state of the stored recording
 func (sr *StoredRecording) Data(key *ari.Key) (*ari.StoredRecordingData, error) {
 	if key == nil || key.ID == "" {
@@ -67,6 +49,13 @@ func (sr *StoredRecording) Data(key *ari.Key) (*ari.StoredRecordingData, error) 
 	if err := sr.client.get("/recordings/stored/"+key.ID, data); err != nil {
 		return nil, dataGetError(err, "storedRecording", "%v", key.ID)
 	}
+
+	// Pass file url info
+	data.FileURL = fmt.Sprintf("%s/recordings/stored/%s/file?api_key=%s:%s",
+		sr.client.Options.URL,
+		key.ID,
+		sr.client.Options.Username,
+		sr.client.Options.Password)
 
 	data.Key = sr.client.stamp(key)
 

@@ -22,9 +22,6 @@ type StoredRecording interface {
 
 	// Delete deletes the recording
 	Delete(key *Key) error
-
-	// File gets the file associated with the stored recording
-	File(key *Key) (*StoredRecordingFile, error)
 }
 
 // StoredRecordingData is the data for a stored recording
@@ -32,20 +29,14 @@ type StoredRecordingData struct {
 	// Key is the cluster-unique identifier for this stored recording
 	Key *Key `json:"key"`
 
-	Format string `json:"format"`
-	Name   string `json:"name"`
+	Format  string `json:"format"`
+	Name    string `json:"name"`
+	FileURL string `json:"fileURL"`
 }
 
 // ID returns the identifier for the stored recording.
 func (d StoredRecordingData) ID() string {
 	return d.Name // TODO: does the identifier include the Format and Name?
-}
-
-// StoredRecordingFile is result with raw stored recording file
-type StoredRecordingFile struct {
-	Key *Key `json:"key"`
-
-	File []byte `json:"file"`
 }
 
 // A StoredRecordingHandle is a reference to a stored recording that can be operated on
